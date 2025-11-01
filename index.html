@@ -1,97 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" content="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopkick Rewards</title>
-<link rel="icon" href="https://play-lh.googleusercontent.com/EQldJhR7r5Tc9B5_6RMBzvD2C8uU9EeLuQ0r1z1HKsU35slx2AfX6v1scoVvw-WiYg=w240-h480-rw">
-
-<!-- Google Play Store Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "Shopkick",
-  "operatingSystem": "Android",
-  "applicationCategory": "Shopping",
-  "url": "https://play.google.com/store/apps/details?id=com.shopkick.app"
-}
-</script>
-
-<style>
-body{
- font-family: Arial, sans-serif;
- background: #f2f7ff;
- margin: 0;
- padding: 0;
- text-align: center;
-}
-.header{
- background: #0057ff;
- color: #fff;
- padding: 18px;
- font-size: 22px;
- font-weight: bold;
-}
-.container{
- margin: 25px auto;
- max-width: 420px;
- background: #ffffff;
- padding: 20px;
- border-radius: 14px;
- box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-.logo img{
- width: 120px;
-}
-.btn{
- background: #0057ff;
- color: white;
- font-size: 18px;
- padding: 12px 16px;
- border-radius: 10px;
- display: block;
- margin: 20px auto;
- width: 90%;
- border: none;
- cursor: pointer;
- text-decoration: none;
- font-weight: bold;
-}
-.footer-links{
- margin-top: 30px;
-}
-.footer-links a{
- color: #333;
- font-size: 14px;
- margin: 0 6px;
- text-decoration: none;
-}
-</style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopkick: Gift Cards & Rewards - Earn Rewards While Shopping</title>
+    <style>
+        :root {
+            --primary-color: #5E35B1;
+            --secondary-color: #FF4081;
+            --accent-color: #7C4DFF;
+            --light-color: #F5F5F5;
+            --dark-color: #212121;
+            --text-color: #424242;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            gap: 40px;
+        }
+        
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(94, 53, 177, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(94, 53, 177, 0.4);
+            background-color: var(--accent-color);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 15px rgba(255, 64, 129, 0.4);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-color), #FF80AB);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        
+        .download h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .download p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 80px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://play-lh.googleusercontent.com/2v9UBxpI6ymuD-YuiQCAV2GdmXrrSMPO1FzrNGJpRzco1UDu5oCERLWfigvNf0n5FA=w2560-h1440-rw" alt="Shopkick App Icon">
+                    <div>
+                        <h1>Shopkick</h1>
+                        <p>Gift Cards & Rewards</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="https://www.lnksforyou.com/view.php?id=5542662&pub=1929615" class="btn">Download Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header">Shopkick Rewards</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Earn Rewards While Shopping</h2>
+                <p>Shopkick is the rewards app that rewards you for the shopping you already do. Earn points (kicks) just for walking into your favorite stores, scanning barcodes, and buying your favorite products.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.lnksforyou.com/view.php?id=5542662&pub=1929615" class="btn">
+                        <i class="fab fa-google-play"></i> Google Play
+                    </a>
+                    <a href="https://www.mobtrk.link/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
+                        <i class="fab fa-apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://play-lh.googleusercontent.com/2v9UBxpI6ymuD-YuiQCAV2GdmXrrSMPO1FzrNGJpRzco1UDu5oCERLWfigvNf0n5FA=w2560-h1440-rw" alt="Shopkick App Screenshot">
+            </div>
+        </div>
+    </section>
 
-<div class="container">
- <div class="logo">
-   <img src="https://play-lh.googleusercontent.com/EQldJhR7r5Tc9B5_6RMBzvD2C8uU9EeLuQ0r1z1HKsU35slx2AfX6v1scoVvw-WiYg=w240-h480-rw">
- </div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shopkick Features</h2>
+                <p>Discover how you can easily earn rewards with Shopkick</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Easy Points Earning</h3>
+                    <p>Get kicks points just for walking into stores, scanning barcodes, and buying your favorite products.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Gift Cards</h3>
+                    <p>Redeem your points for gift cards from your favorite stores like Amazon, Target, Starbucks and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Real Rewards</h3>
+                    <p>Get real rewards that you can use immediately at your favorite stores.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>No Purchase Required</h3>
+                    <p>You can earn points without having to make purchases, just by visiting stores and scanning products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <h2>Earn Free Gift Cards Just For Shopping!</h2>
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Shopkick Works</h2>
+                <p>3 simple steps to start earning rewards</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download The App</h3>
+                    <p>Download the Shopkick app for free from Google Play or App Store.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Earn Points</h3>
+                    <p>Get kicks points by visiting stores, scanning products, and making purchases.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Redeem Points</h3>
+                    <p>Redeem your points for gift cards from your favorite stores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <a class="btn" href="https://play.google.com/store/apps/details?id=com.shopkick.app" target="_blank">
- Install Shopkick
- </a>
-</div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>User Reviews</h2>
+                <p>Join millions of users who are getting rewards with Shopkick</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "I've earned over $50 in Amazon gift cards using Shopkick. It's an amazing app!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah</h4>
+                            <p>User since 2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "I love that I can earn points just by walking into stores without having to buy anything. It's so easy!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Michael</h4>
+                            <p>User since 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Shopkick made shopping more fun. I always look forward to getting extra rewards from stores I visit."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Jennifer</h4>
+                            <p>User since 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="footer-links">
- <a href="privacy-policy.html">Privacy Policy</a> |
- <a href="terms.html">Terms</a> |
- <a href="contact.html">Contact</a>
-</div>
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Start Earning Rewards Today</h2>
+            <p>Download the Shopkick app for free and start collecting points to redeem for gift cards from your favorite stores.</p>
+            <div class="cta-buttons">
+                <a href="https://www.lnksforyou.com/view.php?id=5542662&pub=1929615" class="btn">
+                    <i class="fab fa-google-play"></i> Google Play
+                </a>
+                <a href="https://www.mobtrk.link/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
+                    <i class="fab fa-apple"></i> App Store
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Shopkick</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Company</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Shopkick. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
