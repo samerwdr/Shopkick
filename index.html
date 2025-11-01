@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" content="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" />
+<meta name="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" content="6f6f1d313e9a696599ce7cf4f92c7cd76e9edb77" />
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopkick: Gift Cards & Rewards - Earn Rewards While Shopping</title>
     <style>
@@ -368,10 +370,29 @@
             color: var(--secondary-color);
         }
         
+        .policy-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .policy-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .policy-links a:hover {
+            color: var(--secondary-color);
+        }
+        
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             opacity: 0.7;
         }
@@ -398,6 +419,12 @@
             
             .cta-buttons {
                 justify-content: center;
+            }
+            
+            .policy-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
         }
         
@@ -446,7 +473,7 @@
                     <a href="https://www.lnksforyou.com/view.php?id=5542662&pub=1929615" class="btn">
                         <i class="fab fa-google-play"></i> Google Play
                     </a>
-                    <a href="https://www.mobtrk.link/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
+                    <a href="https://www.directcpi.com/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
                         <i class="fab fa-apple"></i> App Store
                     </a>
                 </div>
@@ -573,7 +600,7 @@
                 <a href="https://www.lnksforyou.com/view.php?id=5542662&pub=1929615" class="btn">
                     <i class="fab fa-google-play"></i> Google Play
                 </a>
-                <a href="https://www.mobtrk.link/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
+                <a href="https://www.directcpi.com/view.php?id=5542663&pub=1929615" class="btn btn-secondary">
                     <i class="fab fa-apple"></i> App Store
                 </a>
             </div>
@@ -590,7 +617,7 @@
                         <li><a href="#">About Company</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">News</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -598,8 +625,8 @@
                     <ul class="footer-links">
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Support</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -612,6 +639,13 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="policy-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            
             <div class="copyright">
                 <p>&copy; 2023 Shopkick. All rights reserved.</p>
             </div>
